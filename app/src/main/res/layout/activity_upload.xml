@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="40dp"
+    tools:context="com.example.muazt.odev.UploadActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/event_date"
+        android:layout_marginTop="40dp"
+        android:onClick="chooseImage"
+        android:textAlignment="center"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="TITLE"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/event_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/event_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:hint="DATE"
+        android:inputType="date"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/event_date"
+        android:layout_alignBottom="@+id/event_date"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="TIME"
+        android:inputType="time"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/event_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/event_name"
+        android:layout_below="@+id/event_date"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/button"
+        android:onClick="upload"
+        android:text="Create Event"
+        android:textSize="20sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteText_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/event_date"
+        android:layout_below="@+id/event_name"
+        android:text="CATEGORY"
+        android:textSize="10sp" />
+</RelativeLayout>
